@@ -1,15 +1,11 @@
 CC = gcc
 CFLAGS = -Wall -O2
 OBJS = main.o helloworld.o
-TARGET_DIR = target
-TARGET = $(TARGET_DIR)/helloworld
+TARGET = helloworld
 
-$(TARGET): $(OBJS) | $(TARGET_DIR)
+helloworld: $(OBJS)
 	$(CC) -o $(TARGET) $(OBJS)
 
-$(TARGET_DIR): 
-	mkdir -p $(TARGET_DIR)
-	
 main.o: main.c helloworld.h
 	$(CC) $(CFLAGS) -c main.c
 
@@ -17,4 +13,4 @@ helloworld.o: helloworld.c
 	$(CC) $(CFLAGS) -c helloworld.c
 
 clean:
-	rm -rf $(OBJS) $(TARGET_DIR)
+	rm -f $(OBJS) $(TARGET)
