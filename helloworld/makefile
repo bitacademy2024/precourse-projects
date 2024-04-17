@@ -1,6 +1,5 @@
 CC = gcc
 CFLAGS = -Wall -O2
-OBJS = main.o helloworld.o
 TARGET_DIR = target
 TARGET = $(TARGET_DIR)/helloworld
 

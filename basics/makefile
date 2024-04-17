@@ -1,6 +1,5 @@
 CC = gcc
 CFLAGS = -Wall -O2
-OBJS = main.o helloworld.o
 TARGET_DIR = target
 TARGETS = $(TARGET_DIR)/ex01 $(TARGET_DIR)/ex02 $(TARGET_DIR)/ex03 $(TARGET_DIR)/ex05 $(TARGET_DIR)/ex06 $(TARGET_DIR)/ex08
 
