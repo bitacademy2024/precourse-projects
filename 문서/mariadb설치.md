@@ -35,7 +35,7 @@ iconv 소스 컴파일 설치를 한다.
 
 2. 소스 다운로드
 ```bash
-# wget https://downloads.mariadb.org/interstitial/mariadb-10.6.48/source/mariadb-10.6.48.tar.gz 
+# wget https://downloads.mariadb.org/interstitial/mariadb-10.6.17/source/mariadb-10.6.17.tar.gz 
 ```
 
 3. 압축 풀기
