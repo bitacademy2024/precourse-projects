@@ -1,5 +1,3 @@
-#pragma GCC diagnostic ignored "-Wimplicit-function-declaration"
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -31,7 +29,7 @@ void phonebook() {
 
     print_usage();
 
-    scanf(" %c", &cmd);
+    scanf("%c", &cmd);
     __fpurge(stdin);
 
     switch(cmd)
