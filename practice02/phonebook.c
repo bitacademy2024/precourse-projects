@@ -1,3 +1,5 @@
+#pragma GCC diagnostic ignored "-Wimplicit-function-declaration"
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

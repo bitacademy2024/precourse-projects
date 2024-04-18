@@ -1,5 +1,3 @@
-#pragma GCC diagnostic ignored "-Wimplicit-function-declaration"
-
 typedef struct phone
 {
 	char name[20];
