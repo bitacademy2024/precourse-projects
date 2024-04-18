@@ -39,7 +39,6 @@ void insert()
 	scanf("%s", arr_phone[cur_idx].name);
 	__fpurge(stdin);
 
-
 	fputs("전화번호:", stdout);
 	scanf("%s", arr_phone[cur_idx].tel);
 	__fpurge(stdin);
@@ -53,16 +52,14 @@ void insert()
 
 void del()
 {
-	int i;
-	char name[20];
-
 	print_message("삭제");
 
+	char name[20];
 	fputs("이름:", stdout);
 	scanf("%s", name);
 	__fpurge(stdin);
 
-	for(i = 0; i < cur_idx; i++)
+	for(int i = 0; i < cur_idx; i++)
 	{
 		if( strcmp(arr_phone[i].name, name) == 0 )
 		{
@@ -89,7 +86,6 @@ void phonebook()
 
 	scanf("%c", &command); 
 	__fpurge(stdin);
-
 
 	switch(command)
 	{
