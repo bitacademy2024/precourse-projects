@@ -29,19 +29,18 @@ void phonebook() {
 
     print_usage();
 
-    scanf("%c", &cmd);
-    getchar();
+    scanf(" %c", &cmd);
 
     switch(cmd)
     {
         case 'l':
-            list();
+            // list();
             break;    
         case 'i':
-            insert();
+            // insert();
             break;    
         case 'd':
-            del();
+            // del();
             break;    
         case 'q':
             quit();
