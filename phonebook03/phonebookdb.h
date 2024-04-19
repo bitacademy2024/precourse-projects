@@ -5,3 +5,4 @@ typedef struct phone
 	char tel[20];
 } phone;
 
+int phonebookdb_fetch_all(phone**);

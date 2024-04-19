@@ -5,8 +5,6 @@
 #include <stdlib.h>
 #include "phonebookdb.h"
 
-phone* head;
-
 void print_message(char* message)
 {
 	printf("전화번호부>> %s \n", message);
@@ -21,13 +19,13 @@ void list()
 {
 	print_message("전체항목");
 
-	int idx = 1;
-	phone* it = head;
-	while(it->next != NULL)
-	{
-		printf("[%d] 이름:%s, 전화번호:%s \n", idx++, it->next->name, it->next->tel );
-		it = it->next;
-	}
+	// int idx = 1;
+	// phone* it = head;
+	// while(it->next != NULL)
+	// {
+	// 	printf("[%d] 이름:%s, 전화번호:%s \n", idx++, it->next->name, it->next->tel );
+	// 	it = it->next;
+	// }
 }
 
 void insert()
@@ -45,18 +43,18 @@ void insert()
 	scanf("%s", tel);
 	__fpurge(stdin);
 
-	phone* find = head;
-	while(find->next != NULL)
-	{
-		find = find->next;
-	}
+	// phone* find = head;
+	// while(find->next != NULL)
+	// {
+	// 	find = find->next;
+	// }
 
-	phone* new_phone = (phone*)malloc(sizeof(phone));
-	strcpy(new_phone->name, name);
-	strcpy(new_phone->tel, tel);
+	// phone* new_phone = (phone*)malloc(sizeof(phone));
+	// strcpy(new_phone->name, name);
+	// strcpy(new_phone->tel, tel);
 
-	find->next = new_phone;
-	new_phone->next = NULL;
+	// find->next = new_phone;
+	// new_phone->next = NULL;
 
 	print_message("성공적으로 추가되었습니다.");
 }
@@ -70,27 +68,27 @@ void del()
 	scanf("%s", name);
 	__fpurge(stdin);
 
-	phone* find = head;
-	while(find->next != NULL)
-	{
-		if(strcmp(find->next->name, name) == 0)
-		{
-			break;
-		}
+	// phone* find = head;
+	// while(find->next != NULL)
+	// {
+	// 	if(strcmp(find->next->name, name) == 0)
+	// 	{
+	// 		break;
+	// 	}
 
-		find = find->next;
-	}
+	// 	find = find->next;
+	// }
 
-	if(find->next != NULL)
-	{
-		phone* temp = find->next->next;
-		free(find->next);
-		find->next = temp;
-	}
-	else
-	{
-		print_message("삭제 대상이 없음");
-	}
+	// if(find->next != NULL)
+	// {
+	// 	phone* temp = find->next->next;
+	// 	free(find->next);
+	// 	find->next = temp;
+	// }
+	// else
+	// {
+	// 	print_message("삭제 대상이 없음");
+	// }
 }
 
 void quit()
@@ -100,9 +98,6 @@ void quit()
 
 void phonebook()
 {
-	head = (phone*)malloc(sizeof(phone));
-	head->next = NULL;
-
 	while(1)
 	{
 		char command;
