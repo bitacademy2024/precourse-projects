@@ -4,7 +4,7 @@ INCLUDES = -I /usr/local/eluon/mariadb/include/mysql
 LDFLAGS = -L /usr/local/eluon/mariadb/lib -lmysqlclient
 TARGET_DIR = target
 TARGET = $(TARGET_DIR)/phonebook
-OBJS = $(TARGET_DIR)/main.o $(TARGET_DIR)/phonebook.o
+OBJS = $(TARGET_DIR)/main.o $(TARGET_DIR)/phonebook.o $(TARGET_DIR)/phonebookdb.o 
 
 all: $(TARGET)
 

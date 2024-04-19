@@ -6,3 +6,5 @@ typedef struct phone
 } phone;
 
 int phonebookdb_fetch_all(phone**);
+int phonebookdb_insert(phone*);
+int phonebookdb_delete(char*);
