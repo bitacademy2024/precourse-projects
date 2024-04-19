@@ -3,11 +3,12 @@ CFLAGS = -Wall -O2
 INCLUDES = -I /usr/local/eluon/mariadb/include/mysql
 LDFLAGS = -L /usr/local/eluon/mariadb/lib -lmysqlclient
 TARGET_DIR = target
-TARGETS = $(TARGET_DIR)/test_conn $(TARGET_DIR)/test_insert $(TARGET_DIR)/test_delete $(TARGET_DIR)/test_select
+TARGET = $(TARGET_DIR)/phonebook
+OBJS = $(TARGET_DIR)/main.o $(TARGET_DIR)/phonebook.o
 
-all: $(TARGETS)
+all: $(TARGET)
 
-$(TARGETS): %: %.o
+$(TARGET): $(OBJS)
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 $(TARGET_DIR)/%.o: %.c
